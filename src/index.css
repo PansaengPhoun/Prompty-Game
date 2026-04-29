@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-surface: #F9FAFB;
+  --color-surface-hover: #F3F4F6;
+  --color-ink: #111827;
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-muted: #6B7280;
+  --font-sans: 'Inter', 'IBM Plex Sans Thai', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.massive-num {
+  font-size: 140px;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  opacity: 0.05;
+  color: var(--color-ink);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.character-blob {
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0px 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.option-chip {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-surface-hover);
+  transition: all 0.2s ease;
+}
+.option-chip:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+  border-color: #D1D5DB;
+}
+.option-chip:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.option-chip.selected {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+
